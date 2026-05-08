@@ -13,7 +13,7 @@ interface ThemeCtx {
 const Ctx = createContext<ThemeCtx | null>(null);
 
 function autoTheme(): Theme {
-  if (typeof window === "undefined") return "light";
+  if (typeof window === "undefined") return "dark";
   const h = new Date().getHours();
   return h >= 7 && h < 19 ? "light" : "dark";
 }
@@ -24,11 +24,11 @@ function apply(theme: Theme) {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [mode, setModeState] = useState<Mode>("auto");
-  const [theme, setTheme] = useState<Theme>("light");
+  const [mode, setModeState] = useState<Mode>("dark");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    const stored = (localStorage.getItem("theme-mode") as Mode | null) ?? "auto";
+    const stored = (localStorage.getItem("theme-mode") as Mode | null) ?? "dark";
     setModeState(stored);
     const t = stored === "auto" ? autoTheme() : stored;
     setTheme(t);
