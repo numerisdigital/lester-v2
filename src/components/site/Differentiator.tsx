@@ -29,7 +29,7 @@ export function Differentiator() {
             <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
               Threats blocked / mo
             </p>
-            <p className="text-2xl font-semibold text-navy">12,480</p>
+            <p className="text-2xl font-semibold text-foreground">12,480</p>
             <div className="mt-2 h-1.5 rounded-full bg-secondary overflow-hidden">
               <div className="h-full w-3/4 bg-accent rounded-full" />
             </div>
