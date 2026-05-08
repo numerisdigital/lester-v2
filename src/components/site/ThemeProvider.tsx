@@ -60,6 +60,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export function useTheme() {
   const c = useContext(Ctx);
-  if (!c) return { theme: "light" as Theme, mode: "auto" as Mode, setMode: () => {}, toggle: () => {} };
+  if (!c) return { theme: "dark" as Theme, mode: "dark" as Mode, setMode: () => {}, toggle: () => {} };
   return c;
 }
