@@ -40,7 +40,7 @@ export function Differentiator() {
           <p className="font-mono text-xs text-primary uppercase tracking-widest mb-4">
             // 04 — Why Lester
           </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-navy tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-foreground tracking-tight leading-tight">
             Security-First by Design.
           </h2>
           <p className="mt-5 text-foreground/75 text-lg leading-relaxed max-w-lg">
@@ -53,7 +53,7 @@ export function Differentiator() {
                 <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                   <Check className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
-                <span className="text-navy font-medium">{p}</span>
+                <span className="text-foreground font-medium">{p}</span>
               </li>
             ))}
           </ul>
