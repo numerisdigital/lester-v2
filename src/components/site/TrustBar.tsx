@@ -21,7 +21,7 @@ export function TrustBar() {
             {marks.map((m) => (
               <div
                 key={m}
-                className="text-center text-navy/60 font-semibold tracking-tight text-sm sm:text-base hover:text-navy transition-colors"
+                className="text-center text-foreground/60 font-semibold tracking-tight text-sm sm:text-base hover:text-foreground transition-colors"
               >
                 {m}
               </div>

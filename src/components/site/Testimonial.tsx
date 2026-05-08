@@ -5,7 +5,7 @@ export function Testimonial() {
     <section className="bg-secondary py-24 sm:py-32 relative overflow-hidden">
       <div
         aria-hidden
-        className="absolute -top-20 left-10 text-[20rem] font-serif text-navy/5 leading-none select-none"
+        className="absolute -top-20 left-10 text-[20rem] font-serif text-foreground/5 leading-none select-none"
       >
         “
       </div>
@@ -14,7 +14,7 @@ export function Testimonial() {
           <p className="font-mono text-xs text-primary uppercase tracking-widest mb-8">
             // 05 — Client Voice
           </p>
-          <blockquote className="text-2xl sm:text-3xl lg:text-4xl italic text-navy leading-snug font-medium tracking-tight">
+          <blockquote className="text-2xl sm:text-3xl lg:text-4xl italic text-foreground leading-snug font-medium tracking-tight">
             “Lester Solutions didn't just modernise our infrastructure — they
             gave our board the confidence that security and growth can move at
             the same pace.”
@@ -24,7 +24,7 @@ export function Testimonial() {
               SH
             </div>
             <div className="text-left">
-              <p className="font-semibold text-navy">Sarah Hartley</p>
+              <p className="font-semibold text-foreground">Sarah Hartley</p>
               <p className="text-sm text-muted-foreground">
                 Chief Operating Officer, Meridian Capital
               </p>
