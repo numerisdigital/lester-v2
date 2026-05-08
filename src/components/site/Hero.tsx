@@ -5,7 +5,7 @@ export function Hero() {
     <section className="relative min-h-[100svh] flex items-center pt-24 pb-20 overflow-hidden bg-navy text-navy-foreground">
       {/* Background video */}
       <video
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
+        className="absolute inset-0 h-full w-full object-cover opacity-90"
         src="/hero-bg.mp4"
         autoPlay
         muted
@@ -17,15 +17,15 @@ export function Hero() {
       {/* Dark gradient + tint overlays for legibility */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-navy/80 mix-blend-multiply"
+        className="absolute inset-0 bg-navy/40 mix-blend-multiply"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40"
+        className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/55 to-navy/10"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-navy/95 via-transparent to-navy/40"
+        className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/20"
       />
       {/* Subtle accent glow */}
       <div
