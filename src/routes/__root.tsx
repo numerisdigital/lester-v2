@@ -11,7 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { ThemeProvider } from "@/components/site/ThemeProvider";
 
-const themeInitScript = `(function(){try{var m=localStorage.getItem('theme-mode')||'auto';var t=m;if(m==='auto'){var h=new Date().getHours();t=(h>=7&&h<19)?'light':'dark';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
+const themeInitScript = `(function(){try{var m=localStorage.getItem('theme-mode')||'dark';var t=m==='auto'?((function(){var h=new Date().getHours();return(h>=7&&h<19)?'light':'dark';})()):m;if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 function NotFoundComponent() {
   return (
