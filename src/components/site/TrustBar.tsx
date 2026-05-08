@@ -1,12 +1,12 @@
 import { Reveal } from "./Reveal";
 
 const marks = [
-  "Microsoft",
-  "AWS",
-  "Google Cloud",
-  "Cisco",
-  "ISO 27001",
-  "Cyber Essentials+",
+  { name: "Microsoft", src: "/logos/microsoft.svg" },
+  { name: "Amazon Web Services", src: "/logos/aws.svg" },
+  { name: "Google Cloud", src: "/logos/googlecloud.svg" },
+  { name: "Cisco", src: "/logos/cisco.svg" },
+  { name: "ISO 27001 Certified", src: "/logos/iso27001.svg" },
+  { name: "Cyber Essentials Plus", src: "/logos/cyberessentials.svg" },
 ];
 
 export function TrustBar() {
@@ -20,10 +20,15 @@ export function TrustBar() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-6 items-center">
             {marks.map((m) => (
               <div
-                key={m}
-                className="text-center text-foreground/60 font-semibold tracking-tight text-sm sm:text-base hover:text-foreground transition-colors"
+                key={m.name}
+                className="flex items-center justify-center h-10"
               >
-                {m}
+                <img
+                  src={m.src}
+                  alt={m.name}
+                  loading="lazy"
+                  className="max-h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity [filter:brightness(0)] dark:[filter:brightness(0)_invert(1)]"
+                />
               </div>
             ))}
           </div>
