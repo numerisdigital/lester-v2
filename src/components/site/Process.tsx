@@ -26,14 +26,14 @@ export function Process() {
           <p className="font-mono text-xs text-primary uppercase tracking-widest mb-4">
             // 03 — Our Proven Process
           </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-navy tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-foreground tracking-tight leading-tight">
             A clear path from challenge to outcome.
           </h2>
         </Reveal>
 
         <div className="relative">
           {/* horizontal connector (desktop) */}
-          <div className="hidden md:block absolute top-8 left-[8%] right-[8%] h-px bg-navy/15" />
+          <div className="hidden md:block absolute top-8 left-[8%] right-[8%] h-px bg-foreground/15" />
           <div className="hidden md:block absolute top-8 left-[8%] w-1/3 h-px bg-accent" />
 
           <ol className="grid md:grid-cols-3 gap-10 md:gap-8 relative">
@@ -44,7 +44,7 @@ export function Process() {
                     {s.n}
                   </div>
                   <div className="md:mt-8">
-                    <h3 className="text-xl font-semibold text-navy mb-2">
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
                       {s.title}
                     </h3>
                     <p className="text-foreground/75 leading-relaxed max-w-xs">

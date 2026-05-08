@@ -29,7 +29,7 @@ export function Differentiator() {
             <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
               Threats blocked / mo
             </p>
-            <p className="text-2xl font-semibold text-navy">12,480</p>
+            <p className="text-2xl font-semibold text-foreground">12,480</p>
             <div className="mt-2 h-1.5 rounded-full bg-secondary overflow-hidden">
               <div className="h-full w-3/4 bg-accent rounded-full" />
             </div>
@@ -40,7 +40,7 @@ export function Differentiator() {
           <p className="font-mono text-xs text-primary uppercase tracking-widest mb-4">
             // 04 — Why Lester
           </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-navy tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-foreground tracking-tight leading-tight">
             Security-First by Design.
           </h2>
           <p className="mt-5 text-foreground/75 text-lg leading-relaxed max-w-lg">
@@ -53,7 +53,7 @@ export function Differentiator() {
                 <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                   <Check className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
-                <span className="text-navy font-medium">{p}</span>
+                <span className="text-foreground font-medium">{p}</span>
               </li>
             ))}
           </ul>
