@@ -13,6 +13,7 @@ import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import { Reveal } from "@/components/site/Reveal";
+import bgWhy from "@/assets/bg-why.jpg";
 
 export const Route = createFileRoute("/why-choose-us")({
   head: () => ({
@@ -87,6 +88,7 @@ function WhyChooseUsPage() {
           title="20+ years of innovative IT expertise."
           subtitle="There's good reason we continue to be the chosen and trusted partner of many — bespoke solutions, senior expertise and a relentless focus on your outcomes."
           crumb="Why Choose Us"
+          backgroundImage={bgWhy}
         />
 
         <section className="py-24 sm:py-32">
