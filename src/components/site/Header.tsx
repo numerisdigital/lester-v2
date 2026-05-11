@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/lester-logo.png";
 
@@ -21,7 +22,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center group" aria-label="Lester Solutions home">
+        <Link to="/" className="flex items-center group" aria-label="Lester Solutions home">
           <img
             src={logo}
             alt="Lester Solutions"
@@ -29,20 +30,27 @@ export function Header() {
             height={40}
             className="h-8 w-auto object-contain"
           />
-        </a>
-        <nav className="flex items-center gap-2 sm:gap-4">
-          <a
-            href="#"
-            className="hidden sm:inline-flex text-sm text-white/75 hover:text-white transition-colors px-3 py-2"
-          >
-            Client Portal
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center rounded-lg bg-primary text-primary-foreground text-sm font-medium px-4 py-2.5 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+        <nav className="flex items-center gap-1 sm:gap-2">
+          {[
+            { to: "/services", label: "Services" },
+            { to: "/why-choose-us", label: "Why Choose Us" },
+            { to: "/contact", label: "Contact" },
+          ].map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className="hidden md:inline-flex text-sm text-white/75 hover:text-white transition-colors px-3 py-2"
+              activeProps={{ className: "text-white" }}
+            >
+              {l.label}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            className="inline-flex items-center rounded-lg bg-primary text-primary-foreground text-sm font-medium px-4 py-2.5 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 ml-2"
           >
             Book a Consultation
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

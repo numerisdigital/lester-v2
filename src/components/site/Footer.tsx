@@ -1,4 +1,5 @@
 import { Sun, Moon } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/lester-logo.png";
 import numerisIcon from "@/assets/numeris-favicon.png";
 import { useTheme } from "./ThemeProvider";
@@ -25,17 +26,20 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:items-end gap-5">
             <nav className="flex flex-wrap gap-x-8 gap-y-3 sm:justify-end text-sm">
-              {["Services", "Process", "About", "Contact", "Client Portal"].map(
-                (l) => (
-                  <a
-                    key={l}
-                    href="#"
-                    className="hover:text-accent transition-colors"
-                  >
-                    {l}
-                  </a>
-                ),
-              )}
+              {[
+                { to: "/", label: "Home" },
+                { to: "/services", label: "Services" },
+                { to: "/why-choose-us", label: "Why Choose Us" },
+                { to: "/contact", label: "Contact" },
+              ].map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  className="hover:text-accent transition-colors"
+                >
+                  {l.label}
+                </Link>
+              ))}
             </nav>
             <button
               type="button"
