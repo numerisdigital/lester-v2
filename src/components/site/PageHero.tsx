@@ -6,14 +6,37 @@ export function PageHero({
   title,
   subtitle,
   crumb,
+  backgroundImage,
 }: {
   eyebrow: string;
   title: string;
   subtitle?: string;
   crumb: string;
+  backgroundImage?: string;
 }) {
   return (
     <section className="relative bg-navy text-navy-foreground pt-36 pb-20 sm:pt-44 sm:pb-28 overflow-hidden">
+      {backgroundImage && (
+        <>
+          <img
+            src={backgroundImage}
+            alt=""
+            aria-hidden
+            loading="lazy"
+            width={1920}
+            height={1024}
+            className="absolute inset-0 h-full w-full object-cover opacity-25"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/30"
+          />
+        </>
+      )}
       <div
         aria-hidden
         className="drift-a absolute -top-40 -right-32 h-[36rem] w-[36rem] rounded-full blur-3xl opacity-25 pointer-events-none"

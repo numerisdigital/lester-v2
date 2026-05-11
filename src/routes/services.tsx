@@ -15,6 +15,7 @@ import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import { Reveal } from "@/components/site/Reveal";
+import bgServices from "@/assets/bg-services.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -85,6 +86,7 @@ function ServicesPage() {
           title="Discover our IT services."
           subtitle="Strategic, security-first IT services that scale with your business — delivered by senior consultants who care about outcomes."
           crumb="Services"
+          backgroundImage={bgServices}
         />
 
         <section className="py-24 sm:py-32">

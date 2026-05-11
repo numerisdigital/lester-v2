@@ -5,6 +5,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
+import bgContact from "@/assets/bg-contact.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -66,6 +67,7 @@ function ContactPage() {
           title="Strategic advice or technical support — we're here to help."
           subtitle="Reach out using any of the methods below. A dedicated member of our team will respond promptly, ensuring your enquiry is addressed quickly and efficiently."
           crumb="Contact"
+          backgroundImage={bgContact}
         />
 
         <section className="py-24 sm:py-32">
