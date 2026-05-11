@@ -30,6 +30,7 @@ export function Header() {
             height={40}
             className="h-8 w-auto object-contain"
           />
+        </Link>
         <nav className="flex items-center gap-1 sm:gap-2">
           {[
             { to: "/services", label: "Services" },
